@@ -1,11 +1,13 @@
-fetch("../latest.json").then(response => response.json()).then(data => {
+fetch("https://raw.githubusercontent.com/theg1239/cli-top-website/refs/heads/main/latest.json")
+  .then(response => response.json())
+  .then(data => {
     console.log(data.version);
-
+    
     const windowsAnchorTag = document.getElementById("windows-download-link");
     const linuxAnchorTag = document.getElementById("linux-download-link");
     const macAnchorTag = document.getElementById("mac-download-link");
     const androidAnchorTag = document.getElementById("android-download-link");
-    const windowsInstallerAnchorTag = document.getElementById("windowsinstaller-download-link");
+    const windowsInstallerAnchorTag = document.getElementById("windows-installer-download-link");
 
     // The link to the download is a direct link to the file on the deployed repository
     // TODO: Change link to "`https://github.com/ACM-VIT/<cli-top-website>/..." once the repository is made under ACM-VIT organization
