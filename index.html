@@ -52,6 +52,9 @@
                 <li>Android:
                     <a id="android-download-link" href="" target="_blank">Download for Android</a>
                 </li>
+                <li>Windows Installer:
+                    <a id="windows-installer-download-link" href="" target="_blank">Download for Windows</a>
+                </li>
             </ul>
             <!-- added Notice -->
             <div class="download-notice">
@@ -94,21 +97,27 @@
             <p>- Apply changes by restarting the terminal.</p>
 
             <h4>MacOS</h4>
-            <p>a) Modify your shell's profile script(usually .zshrc in the root folder, maybe a hidden file) to include the CLI-TOP folder in your PATH environment variable.</p>
-            <p>b) Try running the command cli-top if you do not see the logo then proceed with the following steps:</p>
-            <p>- Failure to grant full disk access may result in the Terminal error "Operation not permitted." To resolve this issue, navigate to System Preferences > Security & Privacy > Privacy panel, and include Terminal in the Full Disk Access list.
-                If the cli-top command still doesn't work then execute the steps that follow</p>
+            <p>a) Modify your shell's profile script (usually <code>.zshrc</code> in the root folder, maybe a hidden file) to include the CLI-TOP folder in your PATH environment variable.</p>
+            <p>b) Try running the command <code>cli-top</code>. If you do not see the logo, proceed with the following steps:</p>
+            <p>- Failure to grant full disk access may result in the Terminal error "Operation not permitted." To resolve this issue, navigate to System Preferences > Security & Privacy > Privacy panel, and include Terminal in the Full Disk Access list.</p>
             <p>- Check permissions: Use <code>ls -l ./cli-top</code> to view the file's permissions.</p>
             <p>- Add execute permission: If the "x" flag is missing, use <code>chmod +x ./cli-top</code> to grant it.</p>
-            <p>- Remove quarantine flag: Use <code>xattr -d com.apple.quarantine ./cli-top</code> to remove the quarantine flag.
-            </p>
-
+            <p>- Remove quarantine flag: Use <code>xattr -d com.apple.quarantine ./cli-top</code> to remove the quarantine flag.</p>
             <p>- Apply changes by restarting the terminal.</p>
 
             <p>Verify the installation by running <code>cli-top</code> in your command line or terminal. The tool should launch successfully.</p>
+
+            <h4>Windows Installer</h4>
+            <p>This installer simplifies the setup process by automating the following steps:</p>
+            <p>- Download the Windows Installer from the provided link.</p>
+            <p>- Run the installer. It will automatically:</p>
+            <ul>
+                <li>Install CLI-TOP in the <code>%AppData%\cli-top</code> directory.</li>
+                <li>Add the installation path to your system's PATH environment variable.</li>
+            </ul>
+            <p>- Restart your system to apply changes.</p>
+            <p>- Open your terminal or command prompt and run <code>cli-top</code> to verify the installation.</p>            
         </div>
-
-
     </div>
 
     <script src="js/winbox.bundle.js"></script>
