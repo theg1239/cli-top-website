@@ -11,11 +11,11 @@ fetch("../latest.json").then(response => response.json()).then(data => {
     // TODO: Change link to "`https://github.com/ACM-VIT/<cli-top-website>/..." once the repository is made under ACM-VIT organization
 
 
-    windowsAnchorTag.href = `https://github.com/theg1239/cli-top-website/raw/main/buildFiles/v${data.version}/cli-top-windows_v${data.version}.zip`;
-    linuxAnchorTag.href = `https://github.com/theg1239/cli-top-website/raw/main/buildFiles/v${data.version}/cli-top-linux_v${data.version}.zip`;
-    macAnchorTag.href = `https://github.com/theg1239/cli-top-website/raw/main/buildFiles/v${data.version}/cli-top-macos_v${data.version}.zip`;
-    androidAnchorTag.href = `https://github.com/theg1239/cli-top-website/raw/main/buildFiles/v${data.version}/cli-top-android_v${data.version}.zip`;
-    windowsInstallerAnchorTag.href = `https://github.com/theg1239/cli-top-website/raw/main/buildFiles/v${data.version}/cli-top-windows-installer_v${data.version}.exe`;
+    windowsAnchorTag.href = `https://github.com/technical-director-acmvit/cli-top-website/raw/main/buildFiles/v${data.version}/cli-top-windows_v${data.version}.zip`;
+    linuxAnchorTag.href = `https://github.com/technical-director-acmvit/cli-top-website/raw/main/buildFiles/v${data.version}/cli-top-linux_v${data.version}.zip`;
+    macAnchorTag.href = `https://github.com/technical-director-acmvit/cli-top-website/raw/main/buildFiles/v${data.version}/cli-top-macos_v${data.version}.zip`;
+    androidAnchorTag.href = `https://github.com/technical-director-acmvit/cli-top-website/raw/main/buildFiles/v${data.version}/cli-top-android_v${data.version}.zip`;
+    windowsInstallerAnchorTag.href = `https://github.com/technical-director-acmvit/cli-top-website/raw/main/buildFiles/v${data.version}/cli-top-windows-installer_v${data.version}.exe`;
 
     windowsAnchorTag.innerText = `v${data.version}`;
     linuxAnchorTag.innerText = `v${data.version}`;
