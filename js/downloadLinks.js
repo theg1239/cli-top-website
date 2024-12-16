@@ -1,6 +1,4 @@
-fetch("https://raw.githubusercontent.com/theg1239/cli-top-website/refs/heads/main/latest.json")
-  .then(response => response.json())
-  .then(data => {
+fetch("../latest.json").then(response => response.json()).then(data => {
     console.log(data.version);
     
     const windowsAnchorTag = document.getElementById("windows-download-link");
