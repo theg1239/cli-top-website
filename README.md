@@ -14,7 +14,7 @@ Make sure you have the following installed on your machine:
 
 ### Fork the Repository
 
-1. Open your web browser and go to the [repository](https://github.com/ACM-VIT/cli-top-website).
+1. Open your web browser and go to the [repository](https://github.com/ACM-VIT/cli-top-website). 
 
 2. Click the "Fork" button in the upper right corner of the page. This will create a copy of the repository in your GitHub account.
 
