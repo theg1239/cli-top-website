@@ -1,13 +1,16 @@
 const about = document.querySelector('#about')
 const download = document.querySelector('#download')
 const setup = document.querySelector('#setup')
+const changelog = document.querySelector('#changelog')
 const setupContent = document.querySelector('#setup-content')
 const aboutContent = document.querySelector('#about-content')
 const downloadContent = document.querySelector('#download-content')
+const changelogContent = document.querySelector('#changelog-content')
 
 let aboutBoxOpen = false;
 let downloadBoxOpen = false;
 let setupBoxOpen = false;
+let changelogBoxOpen = false;
 
 about.addEventListener('click', () => {
   if (!aboutBoxOpen) {
@@ -102,8 +105,54 @@ setup.addEventListener('click', () => {
   }
 });
 
+changelog.addEventListener('click', () => {
+  if (!changelogBoxOpen) {
+    changelogBoxOpen = true;
+    
+    import('./changelog.js')
+      .then(module => {
+        module.loadChangelogData();
+      })
+      .catch(error => {
+        console.error("Error loading changelog module:", error);
+      });
+      const isMobile = window.innerWidth < 427;
+    const width = isMobile ? '100%' : '600px';
+    const height = isMobile ? '300px' : '500px';
+    const x = 'center';
+    const y = 'center';
 
+    const changelogBox = new WinBox({
+      title: 'Changelog',
+      background: '#00aa00',
+      width: width,
+      height: height,
+      x: x,
+      y: y,
+      mount: changelogContent,
+      class: ["changelog-window"],
+      onfocus: function () {
+        this.setBackground('#00aa00')
+      },
+      onblur: function () {
+        this.setBackground('#777');
+      },
+      onclose: function () {
+        changelogBoxOpen = false;
+      },
+    });
+  }
+});
 
+document.addEventListener('DOMContentLoaded', function() {
+  const changelogLink = document.getElementById('changelog-link');
+  if (changelogLink) {
+    changelogLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      changelog.click();
+    });
+  }
+});
 
 // Typewriter.js
 // https://github.com/ronv/Typewriter.js

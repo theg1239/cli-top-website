@@ -33,6 +33,16 @@ h1 {
   color: var(--tilde-color);
 }
 
+.changelog-link {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.changelog-link:hover {
+  color: #fff;
+}
+
 .tab-title {
   color: #ccc;
 }
@@ -73,12 +83,12 @@ p {
 }
 
 nav {
-  width: 30%;
+  width: 40%;
 }
 
 nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -180,6 +190,148 @@ code {
 
 .wb-body::-webkit-scrollbar-thumb:hover {
   background-color: #ccc;
+}
+
+.version-list {
+  margin-top: 20px;
+}
+
+.current-version {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(75, 91, 194, 0.1);
+  border-radius: 4px;
+}
+
+.current-version .version-number {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.version-entry {
+  margin-bottom: 25px;
+  border-left: 3px solid var(--tilde-color);
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.version-entry:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.version-entry.current {
+  background-color: rgba(75, 91, 194, 0.05);
+  border-radius: 4px;
+  padding: 15px;
+  border-left: 3px solid var(--text-color);
+  margin-bottom: 30px;
+}
+
+.version-entry h3 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.release-date {
+  color: #888;
+  font-size: 0.8em;
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+.current-badge {
+  background-color: var(--text-color);
+  color: #000;
+  font-size: 0.7em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.changes-list {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.changes-list li {
+  margin-bottom: 8px;
+  position: relative;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.changes-list li::before {
+  content: "-";
+  position: absolute;
+  left: -15px;
+  color: var(--tilde-color);
+}
+
+.version-downloads {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.version-download-link {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: rgba(75, 91, 194, 0.2);
+  border-radius: 3px;
+  font-size: 0.8em;
+  transition: all 0.2s ease;
+}
+
+.version-download-link:hover {
+  background-color: rgba(75, 91, 194, 0.4);
+  color: #fff;
+}
+
+.changelog-window .wb-body {
+  padding: 10px 15px;
+  max-height: calc(100% - 40px);
+  overflow-y: auto;
+}
+
+.changelog-window::-webkit-scrollbar {
+  width: 8px;
+}
+
+.changelog-window::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.changelog-window::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+.changelog-window::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.major-version-group {
+  margin-bottom: 40px;
+  border-bottom: 2px dotted #333;
+  padding-bottom: 20px;
+}
+
+.major-version-group:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.major-version-header {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  color: var(--tilde-color);
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
 }
 
 /* Responsive Design */

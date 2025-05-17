@@ -1,0 +1,84 @@
+{
+  "releases": [
+    {
+      "version": "2.8.0",
+      "releaseDate": "2025-03-28",
+      "changes": [
+        "Fixed payment receipt column details",
+        "Restructured fuzzy search functionality in tables",
+        "Added direct syllabus access with acronym support",
+        "Enhanced documentation",
+        "Implemented killswitch 3 feature"
+      ]
+    },
+    {
+      "version": "2.7.0",
+      "releaseDate": "2025-03-15",
+      "changes": [
+        "cli-top syllabus: Easily download syllabus files directly from the CLI",
+        "Auto update: Run cli-top -u to automatically update the CLI-TOP application",
+        "Update checker: Get notified when an update is available",
+        "DA deadline: Deadline status now prominently displayed with enhanced visuals (yellow if less than 7 and red if less than 3)",
+        "Bug fixes & improvements",
+        "New maintainers!"
+      ]
+    },
+    {
+      "version": "2.6.0",
+      "releaseDate": "2025-02-21",
+      "changes": [
+        "Digital Assignment: Enhanced downloads with clear file path confirmation and improved file extension handling",
+        "Course Page: Refined course materials display with a neater presentation and support for web materials",
+        "General: Upgraded cross-platform file auto-opening (including support for WSL, Linux, macOS, and Windows) for a smoother client-side experience"
+      ]
+    },
+    {
+      "version": "2.5.1",
+      "releaseDate": "2024-12-15",
+      "changes": [
+        "Bug Fixes: Resolved various issues for improved reliability",
+        "Timetable ISC Sync: Option to sync the timetable with both Google Calendar and Outlook Calendar, as well as auto-download of VITtimetable.ics file",
+        "General Refinements: Cleaned up the codebase for enhanced stability and maintainability",
+        "UI Tweaks: Corrected printing format in the calendar and other minor adjustments"
+      ]
+    },
+    {
+      "version": "2.5.0",
+      "releaseDate": "2024-11-18",
+      "changes": [
+        "Bug Fixes: Resolved various issues for improved reliability",
+        "Performance Improvements: Optimized processes and reduced response times for a faster and smoother experience",
+        "Command Enhancements: Updated multiple commands for better accuracy and usability",
+        "Usage Tracking: Introduced async usage stats tracking to help us understand how CLI-TOP is used and improve future updates",
+        "Dashboard: Added a usage dashboard for admins to monitor stats and gain insights into command usage trends",
+        "General Refinements: Cleaned up the codebase for improved stability and maintainability"
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "releaseDate": "2024-10-24",
+      "changes": [
+        "Major release with new commands and enhanced functionality",
+        "New commands: calendar, course-page, da, leave, library-dues, logout, msg, nightslip",
+        "Enhanced existing commands for improved performance and reliability",
+        "Improved user experience with more intuitive and responsive interface"
+      ]
+    },
+    {
+      "version": "1.5.0",
+      "releaseDate": "2024-07-08",
+      "changes": [
+        "Major rewrite of the entire codebase removing redundant code and using helper functions",
+        "Implemented killSwitch with 3 modes: 0 (automatic captcha solver), 1 (manual captcha entry), 2 (disable application)"
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "releaseDate": "2024-01-21",
+      "changes": [
+        "Initial release with core functionality",
+        "Available commands: attendance, cgpa, completion, exams, grades, help, hostel, login, marks, profile, receipts, timetable"
+      ]
+    }
+  ]
+}

@@ -12,12 +12,12 @@
 </head>
 
 <body>
-    <div class="container">
-        <nav>
+    <div class="container">        <nav>
             <ul>
                 <li id="about" class="tab-select">/About</li>
                 <li id="download" class="tab-select">/Download</li>
                 <li id="setup" class="tab-select">/Setup</li>
+                <li id="changelog" class="tab-select">/Changelog</li>
             </ul>
         </nav>
         <main>
@@ -59,11 +59,11 @@
                     <a id="windows-installer-download-link" href="#" target="_blank">Download Installer</a>
                 </li>
             </ul>
-            <!-- Notice -->
-            <div class="download-notice">
-                <p>
-                    By downloading CLI-TOP, you agree to our Terms of Service,
+            <!-- Notice -->            <div class="download-notice">            <p>By downloading CLI-TOP, you agree to our Terms of Service,
                     including anonymous usage statistics tracking.
+                </p>
+                <p>
+                    Check out the <span id="changelog-link" class="tilde changelog-link">/Changelog</span> tab to see what's new in each version.
                 </p>
             </div>
         </div>
@@ -106,8 +106,7 @@
             <p>- Failure to grant full disk access may result in the Terminal error "Operation not permitted." To resolve this issue, navigate to System Preferences > Security & Privacy > Privacy panel, and include Terminal in the Full Disk Access list.</p>
             <p>- Check permissions: Use <code>ls -l ./cli-top</code> to view the file's permissions.</p>
             <p>- Add execute permission: If the "x" flag is missing, use <code>chmod +x ./cli-top</code> to grant it.</p>
-            <p>- Remove quarantine flag: Use <code>xattr -d com.apple.quarantine ./cli-top</code> to remove the quarantine flag.</p>
-            <p>- Apply changes by restarting the terminal.</p>
+            <p>- Remove quarantine flag: Use <code>xattr -d com.apple.quarantine ./cli-top</code> to remove the quarantine flag.</p>            <p>- Apply changes by restarting the terminal.</p>
 
             <p>Verify the installation by running <code>cli-top</code> in your command line or terminal. The tool should launch successfully.</p>
 
@@ -121,9 +120,14 @@
             </ul>
             <p>- Open your terminal or command prompt and run <code>cli-top</code> to verify the installation.</p>
         </div>
-    </div>
 
-    <script src="js/winbox.bundle.js"></script>
+        <div id="changelog-content">
+            <h2>changelog<span class="tab-title">:<span class="tilde">~</span>$</span><span class="cursor">|</span></h2>
+            <div class="version-list">
+                <p>Loading release history...</p>
+            </div>
+        </div>
+    </div>    <script src="js/winbox.bundle.js"></script>
     <script src="js/main.js"></script>
     <script type="module" src="js/downloadLinks.js"></script>
 </body>

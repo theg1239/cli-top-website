@@ -39,6 +39,31 @@ Make sure you have the following installed on your machine:
 
 3. Update the `latest.json` file with the new version numbers **only for the OS's for which your update applies** (Do not add new values, update the existing version numbers with the newer ones)
 
+4. Update the `releases.json` file with information about your new release:
+   - Add a new entry at the top of the `releases` array with your version number
+   - Include the release date
+   - Add a list of changes/features in the new version
+
+Here's an example of how to add a new release to the `releases.json` file:
+
+```json
+{
+  "releases": [
+    {
+      "version": "2.9.0",  // Your new version
+      "releaseDate": "2025-05-18",  // Current release date
+      "changes": [
+        "Added new feature X",
+        "Fixed bug in feature Y",
+        "Improved performance of feature Z",
+        "Updated dependencies"
+      ]
+    },
+    // Existing releases...
+  ]
+}
+```
+
 ## Once the build files have been added, you need to commit, push these changes and create a pull request
 
 These instructions will help you make a request to modify the repository with your new build files.
