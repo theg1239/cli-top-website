@@ -23,13 +23,7 @@ h1 {
   font-size: 50px;
   letter-spacing: -5px;
   margin-bottom: 20px;
-}
-
-.command-line {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
+  overflow: hidden;
 }
 
 .acm {
@@ -56,8 +50,8 @@ h1 {
 
 .typewrite > .wrap {
   color: #ccc;
-  display: inline-block;
-  white-space: nowrap;
+  display: inline;
+  white-space: pre;
 }
 
 h2,
@@ -420,22 +414,20 @@ code {
     transition: all 0.3s ease;
   }
   
-
   h1 {
-    font-size: 34px;
+    font-size: 30px;
     text-align: center;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 1.3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    white-space: normal;
   }
-
+  
+  h1 .acm, h1 .tilde, h1 .typewrite {
+    display: inline;
+  }
+  
   .typewrite {
     font-size: 24px;
-    text-align: center;
-    margin-top: 10px;
-    display: block;
   }
 
   .container {
@@ -465,19 +457,18 @@ code {
 
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 24px;
-    letter-spacing: -1px;
+    font-size: 20px;
+    letter-spacing: 0;
+    overflow: visible;
   }
 
   .typewrite {
-    font-size: 20px;
-    max-width: 100%;
-    overflow: hidden;
+    font-size: 18px;
+    padding-left: 3px;
   }
   
-  .wrap {
-    display: inline-block;
-    max-width: 100%;
+  .cursor {
+    margin-left: -3px;
   }
 
   li {
@@ -523,7 +514,13 @@ code {
 
 @media screen and (max-width: 360px) {
   h1 {
-    font-size: 22px;
+    font-size: 18px;
+    white-space: normal;
+    overflow: visible;
+  }
+  
+  .typewrite {
+    font-size: 16px;
   }
   
   .container {
