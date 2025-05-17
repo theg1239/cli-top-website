@@ -25,6 +25,13 @@ h1 {
   margin-bottom: 20px;
 }
 
+.command-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .acm {
   color: var(--text-color);
 }
@@ -49,6 +56,8 @@ h1 {
 
 .typewrite > .wrap {
   color: #ccc;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 h2,
@@ -352,7 +361,7 @@ code {
 
 @media screen and (max-width: 1200px) {
   nav {
-    width: 40%;
+    width: 60%;
   }
 
   h1 {
@@ -366,15 +375,16 @@ code {
 
 @media screen and (max-width: 992px) {
   nav {
-    width: 50%;
+    width: 70%;
   }
 
   nav ul {
-    justify-content: center;
+    justify-content: space-between;
   }
 
   h1 {
     font-size: 40px;
+    letter-spacing: -3px;
   }
 
   .typewrite {
@@ -384,50 +394,90 @@ code {
   li {
     font-size: 105%;
   }
+  
+  .container {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 768px) {
   nav {
     width: 100%;
+    margin-bottom: 20px;
   }
 
   nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  nav ul li {
+    padding: 12px 0;
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+
+  h1 {
+    font-size: 34px;
+    text-align: center;
+    letter-spacing: -2px;
+    line-height: 1.3;
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  nav ul li {
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 30px;
-    text-align: center;
-  }
-
   .typewrite {
-    font-size: 30px;
+    font-size: 24px;
     text-align: center;
+    margin-top: 10px;
+    display: block;
   }
 
   .container {
-    padding: 10px;
+    padding: 15px;
   }
 
   .footer {
-    margin-top: 20px;
+    margin-top: 25px;
+  }
+  
+  .wb-body {
+    padding: 15px;
+  }
+  
+  .version-download-link {
+    padding: 8px 12px;
+    margin: 5px;
+    font-size: 0.9em;
+  }
+  
+  code {
+    padding: 2px 5px;
+    background-color: rgba(0, 255, 0, 0.1);
+    border-radius: 3px;
   }
 }
 
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 24px;
+    letter-spacing: -1px;
   }
 
   .typewrite {
-    font-size: 24px;
+    font-size: 20px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .wrap {
+    display: inline-block;
+    max-width: 100%;
   }
 
   li {
@@ -436,9 +486,52 @@ code {
 
   p {
     margin: 15px 0;
+    font-size: 0.95em;
   }
 
   .footer {
     font-size: 14px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  h3 {
+    font-size: 1.3em;
+  }
+  
+  h4 {
+    font-size: 1.1em;
+  }
+  
+  .version-downloads {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .version-download-link {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  #about-content p,
+  #setup-content p {
+    line-height: 1.6;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 22px;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  nav ul li {
+    padding: 10px 0;
+    font-size: 0.9em;
   }
 }
