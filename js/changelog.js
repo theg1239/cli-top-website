@@ -11,14 +11,12 @@ async function loadChangelogData() {
         if (!releasesData || !releasesData.releases || !Array.isArray(releasesData.releases)) {
             throw new Error("Invalid releases data format");        }        const versionList = document.querySelector(".version-list");
         versionList.innerHTML = "";
-        
-        const currentVersionElement = document.createElement("div");
+          const currentVersionElement = document.createElement("div");
         currentVersionElement.className = "current-version";
-        currentVersionElement.innerHTML = `<p>Current version: <span class="version-number">v${latestData.version}</span> — downloads available in the <span class="tilde">/Download</span> tab</p>`;
+        currentVersionElement.innerHTML = `<p>Current version: <span class="version-number">v${latestData.version}</span> — downloads available in the <span id="download-tab-link" class="tilde download-link">/Download</span> tab</p>`;
         versionList.appendChild(currentVersionElement);
         
-        // Group releases by major version
-        const majorVersions = {};
+         const majorVersions = {};
         releasesData.releases.forEach(release => {
             const version = release.version;
             const majorVersion = version.split('.')[0];
@@ -30,24 +28,19 @@ async function loadChangelogData() {
             majorVersions[majorVersion].push(release);
         });
         
-        // Display releases grouped by major version
         Object.keys(majorVersions).sort((a, b) => b - a).forEach(majorVersion => {
-            // Create major version group
             const majorVersionGroup = document.createElement("div");
             majorVersionGroup.className = "major-version-group";
             
-            // Create major version header
             const majorVersionHeader = document.createElement("h2");
             majorVersionHeader.className = "major-version-header";
             majorVersionHeader.textContent = `Version ${majorVersion}.x`;
             majorVersionGroup.appendChild(majorVersionHeader);
             
-            // Sort releases within this major version (newest first)
             const releases = majorVersions[majorVersion].sort((a, b) => {
                 return parseFloat(b.version) - parseFloat(a.version);
             });
             
-            // Create releases list for this major version
             releases.forEach(release => {
             const versionElement = document.createElement("div");
             versionElement.className = "version-entry";

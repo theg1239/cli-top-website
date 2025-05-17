@@ -315,6 +315,10 @@ code {
   background: #555;
 }
 
+.changelog-window .wb-footer {
+  display: none;
+}
+
 .major-version-group {
   margin-bottom: 40px;
   border-bottom: 2px dotted #333;
@@ -332,6 +336,16 @@ code {
   color: var(--tilde-color);
   border-bottom: 1px solid #333;
   padding-bottom: 5px;
+}
+
+.download-link {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.download-link:hover {
+  color: #fff;
 }
 
 /* Responsive Design */

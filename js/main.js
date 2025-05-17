@@ -152,6 +152,21 @@ document.addEventListener('DOMContentLoaded', function() {
       changelog.click();
     });
   }
+
+  const downloadLinkInText = document.querySelector('.download-link');
+  if (downloadLinkInText) {
+    downloadLinkInText.addEventListener('click', function(e) {
+      e.preventDefault();
+      download.click();
+    });
+  }
+});
+
+document.addEventListener('click', function(e) {
+  if (e.target && e.target.id === 'download-tab-link') {
+    e.preventDefault();
+    download.click();
+  }
 });
 
 // Typewriter.js
