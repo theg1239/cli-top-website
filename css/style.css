@@ -23,6 +23,7 @@ h1 {
   font-size: 50px;
   letter-spacing: -5px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .acm {
@@ -33,12 +34,24 @@ h1 {
   color: var(--tilde-color);
 }
 
+.changelog-link {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.changelog-link:hover {
+  color: #fff;
+}
+
 .tab-title {
   color: #ccc;
 }
 
 .typewrite > .wrap {
   color: #ccc;
+  display: inline;
+  white-space: pre;
 }
 
 h2,
@@ -73,12 +86,12 @@ p {
 }
 
 nav {
-  width: 30%;
+  width: 40%;
 }
 
 nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -182,11 +195,167 @@ code {
   background-color: #ccc;
 }
 
+.version-list {
+  margin-top: 20px;
+}
+
+.current-version {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(75, 91, 194, 0.1);
+  border-radius: 4px;
+}
+
+.current-version .version-number {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.version-entry {
+  margin-bottom: 25px;
+  border-left: 3px solid var(--tilde-color);
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.version-entry:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.version-entry.current {
+  background-color: rgba(75, 91, 194, 0.05);
+  border-radius: 4px;
+  padding: 15px;
+  border-left: 3px solid var(--text-color);
+  margin-bottom: 30px;
+}
+
+.version-entry h3 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.release-date {
+  color: #888;
+  font-size: 0.8em;
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+.current-badge {
+  background-color: var(--text-color);
+  color: #000;
+  font-size: 0.7em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.changes-list {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.changes-list li {
+  margin-bottom: 8px;
+  position: relative;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.changes-list li::before {
+  content: "-";
+  position: absolute;
+  left: -15px;
+  color: var(--tilde-color);
+}
+
+.version-downloads {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.version-download-link {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: rgba(75, 91, 194, 0.2);
+  border-radius: 3px;
+  font-size: 0.8em;
+  transition: all 0.2s ease;
+}
+
+.version-download-link:hover {
+  background-color: rgba(75, 91, 194, 0.4);
+  color: #fff;
+}
+
+.changelog-window .wb-body {
+  padding: 10px 15px;
+  max-height: calc(100% - 40px);
+  overflow-y: auto;
+}
+
+.changelog-window::-webkit-scrollbar {
+  width: 8px;
+}
+
+.changelog-window::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.changelog-window::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+.changelog-window::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.changelog-window .wb-footer {
+  display: none;
+}
+
+.major-version-group {
+  margin-bottom: 40px;
+  border-bottom: 2px dotted #333;
+  padding-bottom: 20px;
+}
+
+.major-version-group:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.major-version-header {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  color: var(--tilde-color);
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+}
+
+.download-link {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.download-link:hover {
+  color: #fff;
+}
+
 /* Responsive Design */
 
 @media screen and (max-width: 1200px) {
   nav {
-    width: 40%;
+    width: 60%;
   }
 
   h1 {
@@ -200,15 +369,16 @@ code {
 
 @media screen and (max-width: 992px) {
   nav {
-    width: 50%;
+    width: 70%;
   }
 
   nav ul {
-    justify-content: center;
+    justify-content: space-between;
   }
 
   h1 {
     font-size: 40px;
+    letter-spacing: -3px;
   }
 
   .typewrite {
@@ -218,50 +388,87 @@ code {
   li {
     font-size: 105%;
   }
+  
+  .container {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 768px) {
   nav {
     width: 100%;
+    margin-bottom: 20px;
   }
 
   nav ul {
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
   }
 
   nav ul li {
-    padding: 10px 0;
-    width: 100%;
+    padding: 12px 0;
     text-align: center;
+    border-radius: 6px;
+    transition: all 0.3s ease;
   }
-
+  
   h1 {
     font-size: 30px;
     text-align: center;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    white-space: normal;
   }
-
+  
+  h1 .acm, h1 .tilde, h1 .typewrite {
+    display: inline;
+  }
+  
   .typewrite {
-    font-size: 30px;
-    text-align: center;
+    font-size: 24px;
   }
 
   .container {
-    padding: 10px;
+    padding: 15px;
   }
 
   .footer {
-    margin-top: 20px;
+    margin-top: 25px;
+  }
+  
+  .wb-body {
+    padding: 15px;
+  }
+  
+  .version-download-link {
+    padding: 8px 12px;
+    margin: 5px;
+    font-size: 0.9em;
+  }
+  
+  code {
+    padding: 2px 5px;
+    background-color: rgba(0, 255, 0, 0.1);
+    border-radius: 3px;
   }
 }
 
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 24px;
+    font-size: 20px;
+    letter-spacing: 0;
+    overflow: visible;
   }
 
   .typewrite {
-    font-size: 24px;
+    font-size: 18px;
+    padding-left: 3px;
+  }
+  
+  .cursor {
+    margin-left: -3px;
   }
 
   li {
@@ -270,9 +477,58 @@ code {
 
   p {
     margin: 15px 0;
+    font-size: 0.95em;
   }
 
   .footer {
     font-size: 14px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  h3 {
+    font-size: 1.3em;
+  }
+  
+  h4 {
+    font-size: 1.1em;
+  }
+  
+  .version-downloads {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .version-download-link {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  #about-content p,
+  #setup-content p {
+    line-height: 1.6;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 18px;
+    white-space: normal;
+    overflow: visible;
+  }
+  
+  .typewrite {
+    font-size: 16px;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  nav ul li {
+    padding: 10px 0;
+    font-size: 0.9em;
   }
 }
