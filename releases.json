@@ -1,6 +1,18 @@
 {
   "releases": [
     {
+      "version": "2.9.0",
+      "releaseDate": "2025-05-31",
+      "changes": [
+        "Fixed small edge case in course-page where material had both reference and webmaterial",
+        "Added login validation helpers, constants for selectors everywhere",
+        "Enhanced exam schedule functionality",
+        "Added current day highlight to calendar",
+        "Refactored time-table with support for working Saturdays",
+        "Fixed session expiry issues"
+      ]
+    },
+    {
       "version": "2.8.0",
       "releaseDate": "2025-03-28",
       "changes": [
