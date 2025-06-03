@@ -1,5 +1,13 @@
 {
   "releases": [
+    { 
+      "version": "2.9.2",
+      "releaseDate": "2025-06-03",
+      "changes": [
+        "Finally fixed windows auto-update",
+        "Enhanced auto-update visuals and flow"
+      ]
+    },
     {
       "version": "2.9.1",
       "releaseDate": "2025-06-01",
