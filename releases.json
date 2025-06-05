@@ -1,6 +1,20 @@
 {
   "releases": [
-    { 
+    {
+      "version": "2.9.3",
+      "releaseDate": "2025-06-06",
+      "changes": [
+        "Made it easier to connect with the calendar service",
+        "Improved how security tokens are handled for safer page loads",
+        "Speeded up and reduced memory use when reading web pages",
+        "Updated the documentation so it’s up to date and easier to follow",
+        "Enhanced the request-throttling system to handle busy periods more smoothly",
+        "Switched to a single shared web client to improve performance",
+        "Shrank the final binary size for faster downloads and updates by 4-5 MB",
+        "Improved how attendance data is detected and processed for better accuracy"
+      ]
+    },
+    {
       "version": "2.9.2",
       "releaseDate": "2025-06-03",
       "changes": [
@@ -95,7 +109,8 @@
       "version": "1.5.0",
       "releaseDate": "2024-07-08",
       "changes": [
-        "Major rewrite of the entire codebase removing redundant code and using helper functions"      ]
+        "Major rewrite of the entire codebase removing redundant code and using helper functions"
+      ]
     },
     {
       "version": "1.1.0",
