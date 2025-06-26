@@ -1,6 +1,15 @@
 {
   "releases": [
     {
+      "version": "2.9.4",
+      "releaseDate": "2025-06-26",
+      "changes": [
+        "Added faculty schedule allocation schedule command",
+        "Refactored course-page command to use the new web client",
+        "Improved error handling on exams command"
+      ]
+    },
+    {
       "version": "2.9.3",
       "releaseDate": "2025-06-06",
       "changes": [
