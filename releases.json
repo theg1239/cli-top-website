@@ -1,6 +1,14 @@
 {
   "releases": [
     {
+      "version": "2.9.5",
+      "releaseDate": "2025-07-19",
+      "changes": [
+        "Bug fixed in timetable command (TD2 slot and duplicate working saturday classes)",
+        "Course-page download order UX improvement"
+      ]
+    },
+    {
       "version": "2.9.4",
       "releaseDate": "2025-06-26",
       "changes": [
