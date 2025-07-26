@@ -1,6 +1,14 @@
 {
   "releases": [
     {
+      "version": "2.9.6",
+      "releaseDate": "2025-07-26",
+      "changes": [
+        "Fixed bug in timetable command (incorrect working saturday recognition)",
+        "Fixed parsing in receipts command"
+      ]
+    },
+    {
       "version": "2.9.5",
       "releaseDate": "2025-07-19",
       "changes": [
