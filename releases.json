@@ -1,6 +1,13 @@
 {
   "releases": [
     {
+      "version": "2.9.7",
+      "releaseDate": "2025-08-11",
+      "changes": [
+        "Added new consolidated course-page for viewing current semester course materials and course-page-archive for viewing past materials older materials"
+      ]
+    },
+    {
       "version": "2.9.6",
       "releaseDate": "2025-07-26",
       "changes": [
