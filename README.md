@@ -94,6 +94,24 @@ git push
 
 6.  Your changes are now proposed to be merged into the original repository. The project maintainer will review and merge your changes
 
+## Using `organise.sh` to automate build file organization
+
+After adding your build files to the root folder of this repo, you can use the `organise.sh` script to automate the organization and validation of your build files.
+
+### How to use
+
+1. Make sure you have executable permissions for the script:
+   ```bash
+   chmod +x organise.sh
+   ```
+
+2. Run the script from the project root:
+   ```bash
+   ./organise.sh vx.y.z
+   ```
+
+This script will help you verify and organize your build files according to the required structure.
+
 # Authors
 
 - [Amritsai](https://github.com/gekyxme)
