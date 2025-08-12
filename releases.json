@@ -1,6 +1,13 @@
 {
   "releases": [
     {
+      "version": "2.9.8",
+      "releaseDate": "2025-08-13",
+      "changes": [
+        "Fix for module number in course material and same name material saving"
+      ]
+    },
+    {
       "version": "2.9.7",
       "releaseDate": "2025-08-11",
       "changes": [
