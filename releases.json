@@ -1,6 +1,15 @@
 {
   "releases": [
     {
+      "version": "2.9.9",
+      "releaseDate": "2025-11-16",
+      "changes": [
+        "Performance & UX improvements",
+        "Config file path handling improvements",
+        "Implement semester caching and better concurrency handling"
+      ]
+    },
+    {
       "version": "2.9.8",
       "releaseDate": "2025-08-13",
       "changes": [
