@@ -1,6 +1,15 @@
 {
   "releases": [
     {
+      "version": "2.9.10",
+      "releaseDate": "2025-11-17",
+      "changes": [
+        "Now you see this notification!",
+        "Hotfix for auto-update",
+        "Table responsiveness improvements"
+      ]
+    },
+    {
       "version": "2.9.9",
       "releaseDate": "2025-11-16",
       "changes": [
